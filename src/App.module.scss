@@ -14,3 +14,14 @@
 
   background-color: #efebeb;
 }
+
+.phonebookWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .title {
+    padding-left: 10px;
+    color: #7b2f3d;
+  }
+}
