@@ -22,10 +22,10 @@ export default class App extends Component {
       duration: 3000,
       position: 'top-center',
       style: {
-        backgroundColor: '#fc624d',
+        backgroundColor: '#d14431',
+        fontSize: '20px',
         color: 'white',
         fontWeight: '500',
-        width: '380px',
       },
     });
 
