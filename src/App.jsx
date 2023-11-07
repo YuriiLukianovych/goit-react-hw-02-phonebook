@@ -82,13 +82,16 @@ export default class App extends Component {
 
             <h2 className={css.title}>Contacts</h2>
             <Filter
+              stateContactList={this.state.contacts}
               onFilterSearch={this.onSearchInputChange}
               filter={this.state.filter}
               clearFilter={this.clearFilter}
             />
             <ContactList
+              stateContactList={this.state.contacts}
               contactList={visibleContacts}
               deleteContact={this.handleDeleteContact}
+              filter={this.state.filter}
             />
           </div>
         </Widget>

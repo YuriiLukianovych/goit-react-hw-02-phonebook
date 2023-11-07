@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './Filter.module.scss';
 
-function Filter({ filter, onFilterSearch, clearFilter }) {
+function Filter({ filter, onFilterSearch, clearFilter, stateContactList }) {
   return (
     <div className={css.formRow}>
       <label htmlFor="filter">Find contact by name:</label>
@@ -11,6 +11,7 @@ function Filter({ filter, onFilterSearch, clearFilter }) {
         name="filter"
         type="text"
         value={filter}
+        // disabled={!stateContactList.length && !filter}
         onChange={e => onFilterSearch(e)}
       />
       {filter && (
