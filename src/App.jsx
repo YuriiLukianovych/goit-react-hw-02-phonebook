@@ -85,6 +85,7 @@ export default class App extends Component {
               onFilterSearch={this.onSearchInputChange}
               filter={filter}
               clearFilter={this.clearFilter}
+              disabled={!contacts.length}
             />
             <ContactList
               contactList={visibleContacts}
