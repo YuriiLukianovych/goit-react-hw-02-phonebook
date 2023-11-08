@@ -96,14 +96,11 @@ export default class App extends Component {
                 Contact List is empty
               </p>
             )}
-            {contacts.length
-              ? !visibleContacts.length &&
-                filter && (
-                  <p style={{ color: '#6c0e0e', fontWeight: '500' }}>
-                    Nothing was found for your request
-                  </p>
-                )
-              : ''}
+            {!visibleContacts.length && filter && (
+              <p style={{ color: '#6c0e0e', fontWeight: '500' }}>
+                Nothing was found for your request
+              </p>
+            )}
           </div>
         </Widget>
         <Toaster />
