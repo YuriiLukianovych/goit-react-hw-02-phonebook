@@ -82,17 +82,27 @@ export default class App extends Component {
 
             <h2 className={css.title}>Contacts</h2>
             <Filter
-              stateContactList={this.state.contacts}
               onFilterSearch={this.onSearchInputChange}
-              filter={this.state.filter}
+              filter={filter}
               clearFilter={this.clearFilter}
             />
             <ContactList
-              stateContactList={this.state.contacts}
               contactList={visibleContacts}
               deleteContact={this.handleDeleteContact}
-              filter={this.state.filter}
             />
+            {!contacts.length && (
+              <p style={{ color: '#6c0e0e', fontWeight: '500' }}>
+                Contact List is empty
+              </p>
+            )}
+            {contacts.length
+              ? !visibleContacts.length &&
+                filter && (
+                  <p style={{ color: '#6c0e0e', fontWeight: '500' }}>
+                    Nothing was found for your request
+                  </p>
+                )
+              : ''}
           </div>
         </Widget>
         <Toaster />
